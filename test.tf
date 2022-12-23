@@ -33,6 +33,7 @@ resource "aws_ami" "awsAmiEncrypted" {
 
   ebs_block_device {
     device_name = "dev-name"
-    encrypted   = true
+    encrypted   = "false" 
+    
   }
 }
