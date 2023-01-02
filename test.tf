@@ -35,6 +35,8 @@ resource "aws_ami" "awsAmiEncrypted" {
     device_name = "dev-name"
     encrypted = "false"
   }
+  
+  
 }
 
 resource "aws_s3_bucket" "km_blob_storage" {
