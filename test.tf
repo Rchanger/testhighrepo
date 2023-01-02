@@ -36,3 +36,11 @@ resource "aws_ami" "awsAmiEncrypted" {
     encrypted = "false"
   }
 }
+
+resource "aws_s3_bucket" "km_blob_storage" {
+  bucket = "km-blob-storage-${var.environment}"
+  acl    = "private"
+  tags = merge(var.default_tags, {
+    name = "km_blob_storage_${var.environment}"
+  })
+}
