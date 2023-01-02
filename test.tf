@@ -29,11 +29,11 @@ resource "aws_vpc" "my_vpc" {
 
 resource "aws_ami" "awsAmiEncrypted" {
 
-  name                = "some-name"
+  name = "some-name"
 
   ebs_block_device {
     device_name = "dev-name"
-    encrypted = "false"
+    encrypted   = true
   }
 }
 
